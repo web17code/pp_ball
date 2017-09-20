@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" bindtap="scanCode">{{motto}}</text>
+  </view>
+</view> -->
+<view class="content">
+  <!--背景图  -->
+  <image src="../../image/bg.jpg" id="bg"></image>
+  <view class="index_content">
+    <!--logo  -->
+    <view class="logo_content">
+      <image class="index_logo" src="../../image/wechatHL.png"></image>
+      <text class="logo_txt">疯狂乒乓</text>
+    </view>
+    <!--底行  -->
+    <view class="bottom_content">
+      <!--userInfo-->
+      <view class="userInfo_content" bindtap="goUserInfo">
+          <image src="../../image/ren.svg" class="userInfo_icon"></image>
+      </view>
+      <!--扫码开启-->
+      <view class="code_content" bindtap="openMachine" wx:if="{{!isPlaying}}">
+        <view class="code_btn">
+            <image src="../../image/scan_logo.png" class="code_icon_img"></image>
+            <text class="code_txt">扫码开启</text>
+        </view>
+      </view>
+      <view class="play_content" wx:if="{{isPlaying}}">
+        <view class="code_btn" bindtap="closeMachine">
+            <text class="code_txt"
+                   style="margin-left:80rpx;">正在游戏</text>
+            <image src="../../image/close.svg" class="code_icon_img"
+                   style="margin-left:10rpx;"></image>
+        </view>
+      </view>
+    </view>
+  </view>  
+</view>

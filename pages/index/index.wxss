@@ -1,0 +1,123 @@
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+/* .index_content {
+  background-size: 100%; 
+  background-image: url("http://thumbnail0.baidupcs.com/thumbnail/4980242ea7c66d8a714c36552b74e8f2?fid=1547569342-250528-36940065184020&time=1502866800&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-hW9EuUMC75IoKiRLk%2FKZr9hPDDk%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=5280129730130718536&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video");
+  background-repeat: no-repeat;
+  height:100vh;
+} */
+.content{
+  position: relative;
+}
+#bg{
+  display: block;
+  width: 100%;
+  height:100vh;
+  position: absolute;
+  z-index:1;
+}
+.index_content {
+  height:100vh;
+  width:100%;
+  position: absolute;
+  z-index: 2;
+}
+.logo_content{
+  overflow: hidden;
+}
+.index_content .index_logo{
+  height: 100rpx;
+  width:100rpx;
+  display:block;
+  float:left;
+}
+.index_content .logo_txt{
+  margin-left: 10rpx;
+  line-height: 100rpx;
+  display:block;
+  float:left;
+  font-size: 34rpx;
+}
+.bottom_content{
+    width:100%;
+    position: absolute;
+    bottom: 5vh;
+}
+.code_content{
+    width:50%;
+    border-radius:50rpx;
+    background:black;
+    margin:0 auto;
+}
+.play_content{
+    width:50%;
+    border-radius:50rpx;
+    background:black;
+    margin:0 auto;
+}
+.play_content .play_txt{
+    color:#fff;
+    line-height: 100rpx;
+    text-align: center;
+    display:block;
+}
+.code_btn{
+    height:100rpx;
+    overflow: hidden;
+}
+/*.code_btn .code_icon{
+   float: left;
+   display:block;
+}
+*/
+.code_btn .code_icon_img{
+    height:60rpx;
+    width:60rpx;
+    float: left;
+    display:block;
+    margin-top: 20rpx;
+    margin-left:80rpx;
+}
+.code_btn .code_txt{
+    margin-left:20rpx;
+    color:#fff;
+    line-height: 100rpx;
+    text-align: center;
+    float: left;
+    display:block;
+}
+.userInfo_content{
+    background: #ffffff;
+    width:90rpx;
+    height: 90rpx;
+    border:2rpx solid #ccc;
+    border-radius:50%;
+    position:fixed;
+    right:30rpx;
+    bottom:5vh;
+}
+.userInfo_content .userInfo_icon{
+    width: 70rpx;
+    height:70rpx;
+    display: block;
+    margin:9rpx auto;
+}

@@ -1,0 +1,39 @@
+<view class="content">
+    <!--个人排名-->
+    <view class="myRank">
+        <view class="listContent">
+            <view class="rankNumber">{{myRank.ranking}}</view>
+            <view class="rankContent">
+                <image class="rankAvatar" src="{{myRank!=null?myRank.portraitImg:userInfo.avatarUrl}}"></image>
+                <view class="rankDetail_name">
+                    <text class="text">{{myRank!=null?myRank.nickname:"我"}}</text>
+                    <text class="text" style="font-size: 24rpx;" wx:if="{{myRank!=null&&myRank.consumeCalorieCount!=null}}">共消耗{{myRank.consumeCalorieCount}}卡路里</text>
+                    <text class="text" style="font-size: 24rpx;" wx:if="{{myRank==null}}">昨日没有乒乓</text>
+                </view>
+                <view class="rankDetail_score">{{myRank!=null?myRank.scoreCount:0}}分</view>
+            </view>
+        </view>
+    </view>
+    <!--所有排名-->
+    <view class="bottomContent">
+        <view class="rank-list"
+              wx:for="{{ranks}}" wx:for-index="wx_index" wx:for-item="item" wx:key="{{item.rankingId}}">
+            <view class="listContent">
+                <view class="rankNumber">{{wx_index+1}}</view>
+                <view class="rankContent">
+                    <image class="rankAvatar" src="{{item.userType==1?'https://mapp.zhunedu.com'+item.portraitImg:item.portraitImg}}"></image>
+                    <view class="rankDetail_name">
+                        <text class="text">{{item.nickname}}</text>
+                        <text class="text" style="font-size: 24rpx;" wx:if="{{item.consumeCalorieCount!=null}}">共消耗{{item.consumeCalorieCount}}卡路里</text>
+                    </view>
+                    <view class="rankDetail_score">{{item.scoreCount}}分</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--拉取更多-->
+    <view bindtap="getMore" style="font-size:26rpx;color: #dddddd;text-align: center">--- {{hasMoreTxt}} ---</view>
+</view>
+<!--{{wx_index+1}}-->
+<!--{{item.nickname}}-->
+<!--{{item.rankingId}}-->

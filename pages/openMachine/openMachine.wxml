@@ -1,0 +1,25 @@
+<!--logs.wxml-->
+<view class="content">
+    <!--<form bindsubmit="formSubmit">
+        <label class="label_content" for="playNum">
+            <text class="label_txt">局数：</text>
+            <input id="playNum" class="input_num"
+                   name="playNum"
+                   type="text"/>
+        </label>
+        &lt;!&ndash;<button bindtap="getLocation">定位</button>&ndash;&gt;
+        <button formType="submit" class="submit_btn">确定</button>
+    </form>-->
+        <view class="open_txt">选择局数</view>
+        <view class="ofh">
+          <view bindtap="getPlayNum" data-value="25" class="option {{now_index==25?'selected':''}}">
+              打25局</view>
+          <view bindtap="getPlayNum" data-value="50" class="option ml_p5 {{now_index==50?'selected':''}}">
+              打50局</view>
+          <view bindtap="getPlayNum" data-value="75" class="option {{now_index==75?'selected':''}}">
+              打75局</view>
+          <view bindtap="getPlayNum" data-value="100" class="option ml_p5 {{now_index==100?'selected':''}}">
+              打100局</view>
+        </view>
+        <view class="submit_btn" bindtap="formSubmit">确定</view>
+</view>

@@ -1,0 +1,50 @@
+<!--<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>-->
+<!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+<!--<button bindtap="xxx">xxxx</button>-->
+<view class="content">
+    <view class="head">
+        <view class="userinfo-avatar-c">
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="userinfo-nickname-c">
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            <text class="userinfo-tag">爱好者</text>
+        </view>
+    </view>
+    <view class="body">
+        <view class="list" bindtap="goMyInfo">
+            <view class="list_icon_c">
+                <image class="list_icon" src="../../image/myMsg.svg"></image>
+            </view>
+            <text class="list_item">我的信息</text>
+        </view>
+        <view class="list" bindtap="goRank">
+            <view class="list_icon_c">
+                <image class="list_icon" src="../../image/rank.svg"></image>
+            </view>
+            <text class="list_item">我的排名</text>
+            <text class="list_value"> </text>
+        </view>
+        <view class="list" bindtap="goRecord">
+            <view class="list_icon_c">
+                <image class="list_icon" src="../../image/daqiujilu.svg"></image>
+            </view>
+            <text class="list_item">我的记录</text>
+        </view>
+        <view class="list">
+            <button open-type="share" class="send_btn">
+            <view class="list_icon_c">
+                <image class="list_icon" src="../../image/yaoqinghaoyou.svg"></image>
+            </view>
+            <text class="list_item">邀请好友</text>
+            </button>
+        </view>
+        <view class="list" bindtap="setting">
+            <view class="list_icon_c">
+                <image class="list_icon" src="../../image/setting.svg"></image>
+            </view>
+            <text class="list_item">权限设置</text>
+        </view>
+    </view>
+    <view class="foot"></view>
+</view>

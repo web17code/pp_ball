@@ -1,0 +1,78 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.content{
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+.ml_p5{
+  margin-left: 5%;
+}
+/*.label_content{
+  display: block;
+  overflow: hidden;
+}
+.label_txt{
+  display:block;
+  float:left;
+  text-align:right;
+  width:25%;
+  box-sizing:border-box;
+  line-height:70rpx;
+}
+.input_num{
+  width:75%;
+  display:block;
+  float:left;
+  color:#999;
+  border-bottom:1px solid #aaaaaa;
+  padding:5rpx 20rpx;
+  font-size:42rpx;
+  text-align:center;
+  box-sizing:border-box;
+  height:70rpx;
+  line-height:70rpx;
+}*/
+.open_txt{
+  padding-top:80rpx;
+  font-size:42rpx;
+  font-weight:bolder;
+  margin-bottom:70rpx;
+}
+.ofh{
+  overflow: hidden;
+}
+.option{
+  line-height: 140rpx;
+  text-align: center;
+  width:47.5%;
+  border:2px solid #6078FC;
+  border-radius: 15rpx;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.selected{
+  background-color: #6078FC;
+  color:#fff;
+}
+.submit_btn{
+  background-color:#6078FC;
+color:#fff;
+line-height:100rpx;
+text-align:center;
+border-radius:50rpx;
+display:block;
+width:80%;
+margin:0 auto;
+height:100rpx;
+margin-top:150rpx;
+}

@@ -1,0 +1,32 @@
+<!--pages/myInfo.wxml-->
+<view class='myInfoContent'>
+  <!-- <view class='MyInfoTitle'>个人信息</view>  -->
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="section_title">昵称：</view>
+      <input class='section_content' value="{{info.ppUserNickname}}" maxlength='10' name="ppUser.nickname" placeholder="请输入10个字以内"/>
+    </view>
+    <view class="section">
+      <view class="section_title">身高：</view>
+      <input class='section_content' maxlength='3' value="{{info.ppUserStature}}" name="ppUser.stature" placeholder="请输入身高（cm）" type="number" />
+    </view>
+    <view class="section">
+      <view class="section_title">体重：</view>
+      <input class='section_content' maxlength='3' value="{{info.ppUserWeight}}" name="ppUser.weight" placeholder="请输入体重（kg）" type="number"/>
+    </view>
+    <view class="section">
+      <view class="section_title">年龄：</view>
+      <input class='section_content' maxlength='2' value="{{info.ppUserAge}}" name="ppUser.age" placeholder="请输入年龄" type="number"/>
+    </view>
+    <view class="section section_gap">
+      <view class="section_title">性别：</view>
+      <radio-group name="ppUser.sex"  class='section_content_radio'>
+        <label><radio value="1" checked="{{info.ppUserSex=='1'}}"/>男  </label>
+        <label><radio value="0" checked="{{info.ppUserSex!='1'}}"/>女</label>
+      </radio-group>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,76 @@
+.content{
+  min-height: 100vh;
+  background: #f6f6f6;
+  padding:20rpx 5% 40rpx;
+  box-sizing: border-box;
+}
+.txt{
+  text-align:center;
+  height:300rpx;
+  background:#fff;
+  border-radius:10rpx;
+  line-height:300rpx;
+}
+.myIcon{
+  position:relative;
+  top:10rpx;
+  left:-10rpx;
+}
+.record-list {
+  height:180rpx;
+  display: block;
+  border-radius: 10rpx;
+  background-color: #FFFFFF;
+  margin-bottom:20rpx;
+  overflow: hidden;
+  padding-top:20rpx;
+  padding-bottom: 20rpx;
+  padding-left:15rpx;
+}
+.record-list-left,.record-list-right{
+  display:block;
+  float: left;
+}
+.record-list-left{
+  width:70%;
+}
+.record-list-right{
+  width: 30%;
+  line-height:180rpx;
+  overflow: hidden;
+}
+/*.record_no,.record_time,.record_machine,.record_score,.record_em*/
+.record_no,.record_time,.record_machine,.record_score,.record_em{
+  display: block;
+}
+.record_no{
+  width:100%;
+  font-size: 36rpx;
+  color:#393939;
+  margin-top: 10rpx;
+}
+.record_location{
+  color:#979A9F;
+  font-size: 34rpx;
+}
+.record_time{
+  margin-top: 15rpx;
+  color: #979A9F;
+}
+.record_machine{
+  color: #666666;
+  margin-top: 15rpx;
+}
+.record_score{
+  color:#F1436A;
+  font-size: 65rpx;
+  font-weight: bold;
+  float: left;
+  line-height:180rpx;
+}
+.record_em{
+  float:left;
+  font-size:30rpx;
+  line-height:200rpx;
+  margin-left: 5rpx;
+}

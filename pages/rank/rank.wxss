@@ -1,0 +1,71 @@
+.content{
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+.myRank{
+  border-top:1px solid #dddddd;
+  border-bottom:1px solid #dddddd;
+  background: #FFFFFF;
+  margin-bottom: 50rpx;
+}
+.bottomContent{
+  border-top:1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.rank-list{
+  overflow: hidden;
+  background: #FFFFFF;
+}
+.listContent{
+  overflow: hidden;
+}
+.rankNumber,.rankAvatar,.rankDetail,.rankContent{
+  display: block;
+  float: left;
+}
+.rankNumber{
+  box-sizing: border-box;
+  padding-right: 20rpx;
+  height:120rpx;
+  width:10%;
+  line-height: 120rpx;
+  text-align: right;
+}
+.rankContent{
+  height:120rpx;
+  width:90%;
+  border-bottom: 1px solid #dddddd;
+  overflow: hidden;
+}
+.rankAvatar{
+  height:100rpx;
+  width:100rpx;
+  margin-top:10rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  border:1px solid #dddddd;
+}
+.rankDetail{
+  overflow: hidden;
+}
+.rankDetail_name{
+  padding-left: 20rpx;
+  float: left;
+}
+.rankDetail_name .text{
+  display: block;
+  color: #666;
+  line-height: 60rpx;
+  height:60rpx;
+}
+.rankDetail_score{
+  line-height: 120rpx;
+  float: right;
+  margin-right:20rpx;
+}
+.myRank .listContent .rankContent{
+  border:none;
+}
+.content .rank-list:last-child .listContent .rankContent{
+  border:none;
+}

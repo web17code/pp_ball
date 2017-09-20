@@ -1,0 +1,19 @@
+<!--logs.wxml-->
+<view class="content">
+  <block wx:if="{{showKong}}">
+    <view class="txt"><icon type="warn" size="25" class="myIcon"/>暂无您的乒乓记录哦</view> 
+  </block>
+  <block wx:else>
+    <view class="record-list" wx:for="{{records}}" wx:for-index="wx_index" wx:for-item="item" wx:key="{{item.gameScoreId}}">
+      <view class="record-list-left">
+        <text class="record_no">记录编号：{{item.gameScoreId}}</text>
+        <text class="record_machine">机器编号：{{item.ppId}}</text>
+        <text class="record_time">时间：{{item.createTime}}</text>
+      </view>
+      <view class="record-list-right">
+        <text class="record_score">{{item.gameScore}}</text>
+        <text class="record_em">分</text>
+      </view>
+    </view>
+  </block> 
+</view>

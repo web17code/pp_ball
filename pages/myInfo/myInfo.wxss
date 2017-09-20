@@ -1,0 +1,29 @@
+/* pages/myInfo.wxss */
+/* .MyInfoTitle{
+  font-size: 40rpx;
+  text-align:center;
+} */
+.myInfoContent{
+  padding: 100rpx 0;
+}
+.section{
+  overflow: hidden;
+}
+.section_title, .section_content, .section_content_radio {
+  display: block;
+  float: left;
+}
+.section_title{
+  width: 17%;
+  padding-left:5%;
+}
+.section_content{
+  margin-bottom: 50rpx;
+  border-bottom:1px solid #ddd;
+  width:70%;
+}
+.btn-area{
+  margin: 0 auto;
+  margin-top:100rpx;
+  width: 90%;
+}
