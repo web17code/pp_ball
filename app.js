@@ -41,8 +41,10 @@ App({
                             'content-type': 'application/x-www-form-urlencoded'
                         },
                         success: function (res) {
+                          that.globalData.userLevel = res.data.entity.userLevel
                             that.globalData.wxId = res.data.entity.openid;
                             that.globalData.userId = res.data.entity.user.userId;
+                            //console.log(that.globalData.userLevel)
                         }
                     })
                 }
@@ -83,6 +85,7 @@ App({
         })
     },
     globalData: {
+        userLevel:"",
         wxId: '',
         userId:"",
         isPlaying: false,

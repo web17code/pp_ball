@@ -6,8 +6,11 @@ Page({
      * 页面的初始数据
      */
     data: {
+        urlValidImg:"https://mapp.zhunedu.com/ran/random",
         filled: false,
-        info: {}
+        info: {},
+        ImgCode:"",
+        mobile:""
     },
 
     /**
@@ -35,22 +38,25 @@ Page({
                 that.getbaseInfo();
             }else{
                 app.showErrMsg("请求异常")
-                setTimeout(function () {
-                    wx.navigateBack({
-                        delta: 2
-                    })
-                }, 1700)
+                // setTimeout(function () {
+                //     wx.navigateBack({
+                //         delta: 2
+                //     })
+                // }, 1700)
             }
         } else {
+            this.data.mobile = app.globalData.bodyInfo.mobile;
             this.setData({
                 info: {
                     "ppUserNickname": app.globalData.bodyInfo.nickname,
                     "ppUserSex": app.globalData.bodyInfo.sex + '',
                     "ppUserAge": app.globalData.bodyInfo.age,
                     "ppUserStature": app.globalData.bodyInfo.stature,
-                    "ppUserWeight": app.globalData.bodyInfo.weight
+                    "ppUserWeight": app.globalData.bodyInfo.weight,
+                    "mobile": app.globalData.bodyInfo.mobile
                 }
             })
+            console.log(":"+this.data.mobile)
         }
 
     },
@@ -110,14 +116,17 @@ Page({
             success: function (res) {
                 if(res.data.code=="20000"){
                     app.globalData.bodyInfo = res.data.entity;
-                    console.log(app.globalData.bodyInfo)
+                    //console.log(app.globalData.bodyInfo)
                     that.setData({
                         info: {
                             "ppUserNickname": app.globalData.bodyInfo.nickname,
                             "ppUserSex": app.globalData.bodyInfo.sex + '',
                             "ppUserAge": app.globalData.bodyInfo.age,
                             "ppUserStature": app.globalData.bodyInfo.stature,
-                            "ppUserWeight": app.globalData.bodyInfo.weight
+                            "ppUserWeight": app.globalData.bodyInfo.weight,
+                            "userName":app.globalData.bodyInfo.userName,//新加的真实姓名
+                            "mobile":app.globalData.bodyInfo.mobile,//新加手机号
+                            "mobileCode":""//手机验证码设置为空
                         }
                     })
                     wx.hideLoading();
@@ -136,9 +145,58 @@ Page({
         }, 100)*/
     },
     /**
+     * 更换验证码
+     */
+    //更换图片验证码
+    changeValidImg:function(){
+        this.setData({
+            urlValidImg:"https://mapp.zhunedu.com/ran/random?r="+Math.random()
+        })
+    },
+    //设置手机号
+    bindInputMobile:function(e){
+        console.log(e.detail.value);
+        this.data.mobile = e.detail.value;
+    },
+    //设置图片验证码的值
+    bindInputImgCode:function(e){
+        console.log(e.detail.value)
+        this.data.ImgCode = e.detail.value;
+    },
+    //获取手机验证码
+    getMobileCode:function(){
+        var that = this;
+        //手机号符合规则
+        if(this.data.mobile==""){
+            app.showErrMsg("手机号为空");
+            return false;
+        }
+        if(!/^1[34578]\d{9}$/.test(this.data.mobile)){
+            app.showErrMsg("手机号非法");
+            return false;
+        }
+        //校验图片验证码不为空
+        if(this.data.ImgCode==""){
+            app.showErrMsg("图片验证码为空");
+            return false;
+        }
+            wx.request({
+                url: 'https://mapp.zhunedu.com/user/sendMobileNote',
+                data: {randomCode: that.data.ImgCode, mobile: that.data.mobile},
+                method: "POST",
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                },
+                success: function (res) {
+                    console.log(res)
+                }
+            })
+    },
+    /**
      * 提交个人信息
      */
     formSubmit: function (e) {
+        console.log(e.detail.value)
         var that = this;
         for (var key in e.detail.value) {
             if (e.detail.value[key].trim() == "") {

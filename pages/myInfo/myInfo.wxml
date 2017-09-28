@@ -3,28 +3,57 @@
   <!-- <view class='MyInfoTitle'>个人信息</view>  -->
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="section">
-      <view class="section_title">昵称：</view>
+      <view class="section_title"><text decode="true">昵&nbsp;&nbsp;&nbsp;&nbsp;称：</text></view>
       <input class='section_content' value="{{info.ppUserNickname}}" maxlength='10' name="ppUser.nickname" placeholder="请输入10个字以内"/>
     </view>
     <view class="section">
-      <view class="section_title">身高：</view>
+      <view class="section_title"><text decode="true">身&nbsp;&nbsp;&nbsp;&nbsp;高：</text></view>
       <input class='section_content' maxlength='3' value="{{info.ppUserStature}}" name="ppUser.stature" placeholder="请输入身高（cm）" type="number" />
     </view>
     <view class="section">
-      <view class="section_title">体重：</view>
+      <view class="section_title"><text decode="true">体&nbsp;&nbsp;&nbsp;&nbsp;重：</text></view>
       <input class='section_content' maxlength='3' value="{{info.ppUserWeight}}" name="ppUser.weight" placeholder="请输入体重（kg）" type="number"/>
     </view>
     <view class="section">
-      <view class="section_title">年龄：</view>
+      <view class="section_title"><text decode="true">年&nbsp;&nbsp;&nbsp;&nbsp;龄：</text></view>
       <input class='section_content' maxlength='2' value="{{info.ppUserAge}}" name="ppUser.age" placeholder="请输入年龄" type="number"/>
     </view>
     <view class="section section_gap">
-      <view class="section_title">性别：</view>
+      <view class="section_title"><text decode="true">性&nbsp;&nbsp;&nbsp;&nbsp;别：</text></view>
       <radio-group name="ppUser.sex"  class='section_content_radio'>
         <label><radio value="1" checked="{{info.ppUserSex=='1'}}"/>男  </label>
         <label><radio value="0" checked="{{info.ppUserSex!='1'}}"/>女</label>
       </radio-group>
     </view>
+    <view class="section">
+      <view class="section_title">姓名：</view>
+      <input class='section_content' value="{{info.userName}}" name="ppUser.userName" placeholder="请输入真实姓名"/>
+    </view>
+    <view class="section">
+      <view class="section_title">手机号：</view>
+      <input class='section_content' maxlength='11' value="{{info.mobile}}" name="ppUser.mobile" placeholder="请输入手机号" bindinput="bindInputMobile" type="number" id="mobile"/>
+    </view>
+    <view class="section" style="margin-bottom: 40rpx;">
+      <view class="Validimg">
+          <image src="{{urlValidImg}}" bindtap="changeValidImg"></image>
+      </view>
+      <view style="width:30%;overflow: hidden;float: left;">
+        <input class='input_code' placeholder="图片验证码" style="width:100%;" bindinput="bindInputImgCode"/>
+      </view>
+      <view class="getMobileCode">
+        <Button bindtap="getMobileCode">获取验证码</Button>
+      </view>
+    </view>
+    <view class="section">
+      <view class="section_title">验证码：</view>
+      <view class="section_content">
+        <input value="{{info.mobileCode}}" name="code" placeholder="请输入手机验证码" type="number" style="width:100%;"/>
+      </view>
+    </view>
+    <view>
+
+    </view>
+
     <view class="btn-area">
       <button formType="submit">保存</button>
     </view>

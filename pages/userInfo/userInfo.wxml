@@ -8,7 +8,7 @@
         </view>
         <view class="userinfo-nickname-c">
             <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-            <text class="userinfo-tag">爱好者</text>
+            <text class="userinfo-tag">{{userLevel!=''?userLevel:"爱好者"}}</text>
         </view>
     </view>
     <view class="body">

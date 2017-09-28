@@ -2,6 +2,7 @@ var app = getApp();
 Page({
     data: {},
     onShow: function () {
+      console.log(app.globalData.userLevel)
         var that = this;
         //设置用户公开信息
         if (app.globalData.userInfo == null) {
@@ -13,9 +14,11 @@ Page({
             })
         } else {
             that.setData({
-                userInfo: app.globalData.userInfo
+                userInfo: app.globalData.userInfo,
+                userLevel: app.globalData.userLevel
             })
         }
+        console.log(that.data.userLevel)
     },
     setting: function () {
         wx.openSetting({})

@@ -41,7 +41,7 @@ Page({
                     })
                     clearInterval(interval);
                 }
-            }, 100)
+            }, 200)
         }
         that.getMyRank();
         var that = this;
@@ -51,11 +51,13 @@ Page({
                 userInfo: {
                     avatarUrl: "../../image/wx_avatar.png",
                     nickName: "我"
-                }
+                },
+                myLevel: app.globalData.userLevel
             })
         } else {
             that.setData({
-                userInfo: app.globalData.userInfo
+                userInfo: app.globalData.userInfo,
+                myLevel: app.globalData.userLevel
             })
         }
     },

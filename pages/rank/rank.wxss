@@ -58,6 +58,11 @@
   line-height: 60rpx;
   height:60rpx;
 }
+.rankDetail_name .text .rankName{
+  font-size:28rpx;
+  color:#999;
+  margin-left:20rpx; 
+}
 .rankDetail_score{
   line-height: 120rpx;
   float: right;
