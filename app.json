@@ -6,6 +6,7 @@
     "pages/openMachine/openMachine",
     "pages/myRecord/myRecord",
     "pages/myInfo/myInfo",
+    "pages/realName/realName",
     "pages/rank/rank"
   ],
   "window": {

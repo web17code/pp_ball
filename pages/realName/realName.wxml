@@ -1,0 +1,28 @@
+<!--pages/myInfo.wxml-->
+<view class='myInfoContent'>
+  <!-- <view class='MyInfoTitle'>个人信息</view>  -->
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="section_title"><text decode="true">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</text></view>
+      <input class='section_content' value="{{info.userName}}" name="userName" placeholder="请输入真实姓名"/>
+    </view>
+    <view class="section">
+      <view class="section_title">手机号：</view>
+      <input class='section_content' maxlength='11' value="{{info.mobile}}" name="mobile" placeholder="请输入手机号" bindinput="bindInputMobile" type="number" id="mobile"/>
+    </view>
+    <view class="section" style="margin-bottom: 40rpx;padding-top: 7rpx;">
+      <view class="section_title">验证码：</view>
+      <view style="width:40%;overflow: hidden;float: left;">
+        <input value="{{info.mobileCode}}" name="code" placeholder="请输入手机验证码" type="number" style="width:100%;border-bottom:1px solid #ddd;"/>
+      </view>
+      <view class="getMobileCode">
+        <Button bindtap="getMobileCode">{{buttonTxT}}</Button>
+      </view>
+    </view>
+    <view>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

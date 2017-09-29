@@ -38,6 +38,11 @@ Page({
             url: '/pages/myInfo/myInfo'
         })
     },
+    goRealName:function(){
+        wx.navigateTo({
+            url: '/pages/realName/realName'
+        })
+    },
     onShareAppMessage: function (res) {
         console.log(res)
         if (res.from === 'button') {

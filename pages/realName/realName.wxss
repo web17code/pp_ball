@@ -1,0 +1,60 @@
+/* pages/myInfo.wxss */
+/* .MyInfoTitle{
+  font-size: 40rpx;
+  text-align:center;
+} */
+.myInfoContent{
+    /*padding: 100rpx 0;*/
+    padding: 50rpx 0;
+}
+.section{
+    overflow: hidden;
+}
+.section_title, .section_content, .section_content_radio {
+    display: block;
+    float: left;
+}
+.section_content_radio{
+    margin-bottom:50rpx;
+}
+.section_title{
+    width: 21%;
+    padding-left:5%;
+}
+.section_content{
+    margin-bottom: 50rpx;
+    border-bottom:1px solid #ddd;
+    width:70%;
+}
+.input_code{
+    border-bottom:1px solid #ddd;
+    height:70rpx;
+}
+.getMobileCode{
+    float: right;
+    margin-right:4%;
+    position: relative;
+    top:-4rpx;
+}
+.getMobileCode Button{
+    font-size:30rpx;
+}
+.moblie .section_content{
+    width:45%;
+}
+.btn-area{
+    margin: 0 auto;
+    /*margin-top:100rpx;*/
+    width: 90%;
+}
+.Validimg{
+    float: left;
+    padding-left:5%;
+    width:33%rpx;
+    height:70rpx;
+    padding-right:25rpx;
+}
+.Validimg image{
+    width:212rpx;
+    height:70rpx;
+}

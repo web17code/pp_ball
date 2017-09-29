@@ -14,9 +14,15 @@
     <view class="body">
         <view class="list" bindtap="goMyInfo">
             <view class="list_icon_c">
-                <image class="list_icon" src="../../image/myMsg.svg"></image>
+                <image class="list_icon" src="../../image/me.svg"></image>
             </view>
             <text class="list_item">我的信息</text>
+        </view>
+        <view class="list" bindtap="goRealName">
+            <view class="list_icon_c">
+                <image class="list_icon" src="../../image/myMsg.svg"></image>
+            </view>
+            <text class="list_item">实名认证</text>
         </view>
         <view class="list" bindtap="goRank">
             <view class="list_icon_c">

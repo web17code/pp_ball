@@ -85,6 +85,7 @@ App({
         })
     },
     globalData: {
+        mobileCodeInterval:null,
         userLevel:"",
         wxId: '',
         userId:"",
